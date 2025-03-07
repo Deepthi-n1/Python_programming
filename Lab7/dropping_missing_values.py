@@ -9,3 +9,11 @@ print(df)
 # Drop rows with missing values
 df.dropna(inplace=True) # Modify df directly
 print(df) # Print the modified DataFrame
+
+# Fill missing values with 0
+df.fillna(0, inplace=True)
+print(df)
+# Fill missing values with the mean of the column
+df["C"].fillna(df["C"].mean(), inplace=True)
+print(df)
+#if you are getting errors, then copy df to another dataframe
